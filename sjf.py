@@ -34,7 +34,7 @@ print ("Process_Id    Burst_Time    Turnaround_Time    Waiting_Time")
 print (" ")
 
 for i in range(size):
-	print ("    ",process_id[i],"             ",burst_time[i],"              ",turnaround_time[i],"             ",waiting_time[i]+1)
+	print ("    ",process_id[i],"             ",burst_time[i],"              ",turnaround_time[i]+1,"             ",waiting_time[i]+1)
 	
 total=0
 
