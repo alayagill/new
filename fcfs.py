@@ -1,4 +1,4 @@
-size=input("Enter Number of Processes")
+size=int(input("Enter Number of Processes"))
 
 burst_time=[0]*size
 arrival_time=[0]*size
@@ -8,10 +8,10 @@ turnaround_time=[0]*size
 
 for i in range(size):
 
-	print " "
+	print(" ")
 	process_id[i]=input("Enter Process_Id")
 	arrival_time[i]=input("Enter Arrival_Time")
-	burst_time[i]=input("Enter Burst_Time")
+	burst_time[i]=int(input("Enter Burst_Time"))
 	
 for i in range(size):
 
@@ -34,20 +34,14 @@ for i in range(size):
 
 	turnaround_time[i]=burst_time[i]+waiting_time[i]
 	
-print " "
-print "Process_Id    Arrival_Time    Burst_Time    Turnaround_Time    Waiting_Time"
-print " "
+print(" ")
+print("Process_Id    Arrival_Time    Burst_Time    Turnaround_Time    Waiting_Time")
+print (" ")
 
-for i in range(size);
-
-	print "    ",process_id[i],"          ",arrival_time[i],"             ",burst_time[i],"              ",turnaround_time[i],"             ",waiting_time[i]
+for i in range(size):
+	print("    ",process_id[i],"          ",arrival_time[i],"             ",burst_time[i],"              ",turnaround_time[i]+1,"             ",waiting_time[i]+1)
 	
 total=0
 
 for i in range(size):
-
 	total+=turnaround_time[i]
-	
-average=float(total)/float(size)
-
-print "Average Turnaround_Time = ",average
