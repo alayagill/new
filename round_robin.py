@@ -61,8 +61,9 @@ print(" ")
 
 for i in range(size):
     print("    ", process_id[i], "          ", arrival_time[i], "             ", burst_time[i], "              ",
-          turnaround_time[i], "             ", waiting_time[i])
+          turnaround_time[i]+1, "             ", waiting_time[i]+1)
 
 total = 0
 for i in range(size):
     total += turnaround_time[i]
+
